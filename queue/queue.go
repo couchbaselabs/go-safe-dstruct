@@ -12,7 +12,7 @@ type Queue struct {
 	cond *sync.Cond
 }
 
-func newQueue() *Queue {
+func NewQueue() *Queue {
 	return &Queue{
 		list: list.New(),
 		cond: sync.NewCond(&sync.Mutex{}),
